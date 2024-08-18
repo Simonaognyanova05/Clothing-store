@@ -9,30 +9,30 @@ export default function Skills() {
                     <div className="row gutters-60">
                         <div className="col-md-4">
                             <div className="thumbnail text-center">
-                                <img src="assets/images/adobe-photoshop.png" alt="" />
-                                <h4 className="skill__single-part__title">ADOBE PHOTOSHOP</h4>
+                                <img src="assets/images/js-logo.png" alt="" style={{ width: '100px', padding: '10px' }}/>
+                                <h4 className="skill__single-part__title">JAVASCRIPT</h4>
                                 <div className="progress">
-                                    <div className="progress-bar" role="progressbar" style={{ width: '80%', backgroundColor: '#7FB7FA' }}>
+                                    <div className="progress-bar" role="progressbar" style={{ width: '90%', backgroundColor: '#7FB7FA' }}>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="col-md-4">
                             <div className="thumbnail text-center">
-                                <img src="assets/images/adobe-illustrator.png" alt="" />
-                                <h4 className="skill__single-part__title">ADOBE PHOTOSHOP</h4>
+                                <img src="assets/images/react.png" alt="" style={{ width: '100px', padding: '10px' }}/>
+                                <h4 className="skill__single-part__title">REACT.JS</h4>
                                 <div className="progress">
-                                    <div className="progress-bar" role="progressbar" style={{ width: '80%', backgroundColor: '#FFAC1B' }}>
+                                    <div className="progress-bar" role="progressbar" style={{ width: '90%', backgroundColor: '#FFAC1B' }}>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="col-md-4">
                             <div className="thumbnail text-center">
-                                <img src="assets/images/adobe-after-effects.png" alt="" />
-                                <h4 className="skill__single-part__title">ADOBE PHOTOSHOP</h4>
+                                <img src="assets/images/mongo.jpg" alt="" style={{ width: '100px', padding: '10px' }}/>
+                                <h4 className="skill__single-part__title">MongoDB</h4>
                                 <div className="progress">
-                                    <div className="progress-bar" role="progressbar" style={{ width: '80%', backgroundColor: '#C99AFF' }}>
+                                    <div className="progress-bar" role="progressbar" style={{ width: '90%', backgroundColor: '#C99AFF' }}>
                                     </div>
                                 </div>
                             </div>

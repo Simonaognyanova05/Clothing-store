@@ -29,7 +29,7 @@ export default function Header() {
                     <ul className="header__content__sub-title">
                         <li>WEB DEVELOPER <span className="padding"></span></li>
                     </ul>
-                    <Link className="header__button" to="/">HAVE PROJECT? LET'S TALK</Link>
+                    <Link className="header__button" to="https://linktr.ee/SimonaOgnya">HAVE PROJECT? LET'S TALK</Link>
                 </div>
                 <div className="social-icon pull-right">
                     <ul>

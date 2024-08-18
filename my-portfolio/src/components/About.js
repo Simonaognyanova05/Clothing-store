@@ -9,7 +9,7 @@ export default function About() {
                     <div className="row gutters-80">
                         <div className="col-md-4">
                             <div className="about__image">
-                                <img src="assets/images/about-me-image.png" alt="" />
+                                <img src="assets/images/about.jpg" alt="" style={{width: '400px'}}/>
                             </div>
                         </div>
                         <div className="col-md-8 about__content">
