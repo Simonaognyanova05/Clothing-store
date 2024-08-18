@@ -1,3 +1,3 @@
-# Clothing-store
+# Portfolio
 
-This is a web application project to complete the React course.
+This is my portfolio. It was built using React and MongoDb.
