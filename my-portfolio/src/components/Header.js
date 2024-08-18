@@ -25,11 +25,9 @@ export default function Header() {
                 </nav>
                 <div className="header__content text-center">
                     <span className="header__content__block">HELLO</span>
-                    <h1 className="header__content__title">I'M JOHNNY D. DORSCH</h1>
+                    <h1 className="header__content__title">I'M SIMONA OGNYANOVA</h1>
                     <ul className="header__content__sub-title">
-                        <li>UI&/47;UX DESIGNER <span className="padding">&/45;</span></li>
-                        <li>WEB DEVELOPER <span className="padding">&/45;</span></li>
-                        <li>PHOTOGRAPHAR</li>
+                        <li>WEB DEVELOPER <span className="padding"></span></li>
                     </ul>
                     <Link className="header__button" to="/">HAVE PROJECT? LET'S TALK</Link>
                 </div>

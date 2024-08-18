@@ -2,7 +2,7 @@ export default function Footer(){
     return (
         <footer className="footer footer--bg">
           <div className="container text-center">
-            <h1 className="footer__title">OBELA</h1>
+            <h1 className="footer__title">SIMONA</h1>
             <ul className="footer__contact-information">
               <li><a href="tel:5555555555"><i className="material-icons">phone</i> Hotline (+123) 45 67 89 21</a></li>
               <li><a href="mailto:sshariar458@gmail.com"><i className="material-icons">email</i> sshahriar458@gmail.com</a></li>
@@ -19,7 +19,7 @@ export default function Footer(){
                 <li><a href="#"><i className="flaticon-dribbble-logo"></i></a></li>
               </ul>
             </div>
-            <p className="footer__paragraph">Copyright &copy; 2017 DartThemes , All Rights Reserved.</p>
+            <p className="footer__paragraph">Copyright &copy; 2024 Simona Ognyanova. All Rights Reserved.</p>
           </div>
         </footer>
     );
