@@ -1,36 +1,26 @@
-import { Routes, Route } from 'react-router-dom';
-import Header from "./components/Header";
-import About from "./components/About";
-import Blog from "./components/Blog";
-import Brand from "./components/Brand";
-import Owerview from "./components/Owerview";
-import Portfolio from "./components/Portfolio";
-import Service from "./components/Service";
-import Skills from "./components/Skills";
-import Slider from "./components/Slider";
-import Team from "./components/Team";
-import Footer from "./components/Footer";
-
+import { Routes, Route } from "react-router-dom";
+import Header from "./components/user/Header";
+import About from "./components/user/About";
+import Contact from "./components/user/Contact";
+import Home from "./components/user/Home";
+import Project from "./components/user/Project";
+import Login from "./components/admin/Login";
+import Footer from "./components/user/Footer";
 
 function App() {
   return (
     <>
-      <div id="content-wrapper">
-        <Header />
+      <Header />
 
-        <Routes>
-          <Route path='/about' element={<About />} />
-          <Route path='/blog' element={<Blog />} />
-          <Route path='/brand' element={<Brand />} />
-          <Route path='/owerview' element={<Owerview />} />
-          <Route path='/portfolio' element={<Portfolio />} />
-          <Route path='/service' element={<Service />} />
-          <Route path='/skill' element={<Skills />} />
-          <Route path='/slider' element={<Slider />} />
-          <Route path='/team' element={<Team />} />
-        </Routes>
-        <Footer />
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/projects" element={<Project />} />
+        <Route path="/admin/login" element={<Login />} />
+
+      </Routes>
+      <Footer />
     </>
   );
 }
