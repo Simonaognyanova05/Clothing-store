@@ -18,10 +18,11 @@ header nav ul {
   padding: 0;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 header nav ul li {
-  margin: 0 15px;
+  margin: 10px 15px;
 }
 
 header nav ul li a {
@@ -34,7 +35,7 @@ header nav ul li a {
 #home {
   background-color: #0073e6;
   color: #fff;
-  padding: 100px 0;
+  padding: 80px 20px;
   text-align: center;
 }
 
@@ -62,6 +63,26 @@ header nav ul li a {
   line-height: 1.6;
 }
 
+#about .profile-photo {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+#about .btn {
+  background-color: #0073e6;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+#about .btn:hover {
+  background-color: #005bb5;
+}
+
 /* Projects Section */
 #projects {
   background-color: #f4f4f4;
@@ -84,7 +105,8 @@ header nav ul li a {
   border: 1px solid #ddd;
   padding: 20px;
   margin: 10px;
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
 }
 
 #projects .project h3 {
@@ -109,10 +131,11 @@ header nav ul li a {
 
 #gallery .gallery-item {
   margin: 10px;
+  width: calc(33.333% - 20px);
 }
 
 #gallery .gallery-item img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   border: 1px solid #ddd;
 }
@@ -208,4 +231,46 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+  }
+
+  #projects .projects-grid,
+  #gallery .gallery-grid {
+    flex-direction: column;
+  }
+
+  #gallery .gallery-item {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  #about .profile-photo {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  #home .intro h1 {
+    font-size: 2em;
+  }
+
+  #home .intro p {
+    font-size: 1em;
+  }
+
+  #about .content p,
+  #contact form,
+  #admin form {
+    max-width: 100%;
+  }
+
+  footer {
+    font-size: 0.9em;
+  }
 }
