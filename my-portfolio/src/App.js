@@ -7,9 +7,15 @@ import Home from "./components/user/Home";
 import Project from "./components/user/Project";
 import Login from "./components/admin/Login";
 import Footer from "./components/user/Footer";
+
 import HomeAdmin from "./components/admin/HomeAdmin";
 import Logout from "./components/admin/Logout";
 import ContactAdmin from "./components/admin/ContactAdmin";
+import AboutAdmin from "./components/admin/AboutAdmin";
+import ProjectsAdmin from "./components/admin/ProjectsAdmin";
+import WelcomeUser from "./components/admin/WelcomeUser";
+
+
 
 function App() {
   return (
@@ -27,6 +33,10 @@ function App() {
           <Route path="/admin/logout" element={<Logout />} />
           <Route path="/admin/" element={<HomeAdmin />} />
           <Route path="/admin/contacts" element={<ContactAdmin />} />
+          <Route path="/admin/about" element={<AboutAdmin />} />
+          <Route path="/admin/projects" element={<ProjectsAdmin />} />
+          <Route path="/admin/welcome" element={<WelcomeUser />} />
+
 
 
 

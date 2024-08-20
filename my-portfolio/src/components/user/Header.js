@@ -24,7 +24,7 @@ export default function Header() {
             <li><Link to="/admin/contacts">Contact</Link></li>
             <li><Link to="/admin/logout">Logout</Link></li>
         </ul>
-    );
+    ); 
     return (
         <header>
             <nav>
