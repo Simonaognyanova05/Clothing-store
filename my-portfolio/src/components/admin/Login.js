@@ -1,19 +1,43 @@
+import { useAuth } from "../../contexts/AuthContext";
+import { useNavigate } from 'react-router-dom';
+import { loginAdmin } from '../../services/loginAdmin';
+
 export default function Login() {
+    const navigate = useNavigate();
+    const { onLoginAdmin } = useAuth();
+
+    const loginHandler = async (e) => {
+        e.preventDefault();
+
+        let formData = new FormData(e.currentTarget);
+        let { username, password } = Object.fromEntries(formData);
+
+        let adminResult = await loginAdmin(username, password);
+
+        if (adminResult.status === 400) {
+            alert('Admin does not exist!');
+            return;
+        };
+        if (adminResult.status === 401) {
+            alert('Incorrect password!');
+            return;
+        };
+
+        onLoginAdmin(adminResult);
+        navigate('/');
+    }
     return (
         <section id="admin">
             <div class="content">
                 <h2>Admin Panel</h2>
-                <form action="#" method="post">
-                    <label for="project-title">Project Title:</label>
-                    <input type="text" id="project-title" name="project-title" required />
+                <form onSubmit={loginHandler}>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required />
 
-                    <label for="project-description">Project Description:</label>
-                    <textarea id="project-description" name="project-description" required></textarea>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required />
 
-                    <label for="gallery-image">Gallery Image URL:</label>
-                    <input type="text" id="gallery-image" name="gallery-image" required />
-
-                    <input type="submit" value="Add Project" />
+                    <input type="submit" value="Login" />
                 </form>
             </div>
         </section>

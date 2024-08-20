@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { AuthProvider } from "./contexts/AuthContext";
 import Header from "./components/user/Header";
 import About from "./components/user/About";
 import Contact from "./components/user/Contact";
@@ -10,18 +11,20 @@ import Footer from "./components/user/Footer";
 function App() {
   return (
     <>
-      <Header />
+      <AuthProvider>
+        <Header />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/projects" element={<Project />} />
-        
-        <Route path="/admin/login" element={<Login />} />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/projects" element={<Project />} />
 
-      </Routes>
-      <Footer />
+          <Route path="/admin/login" element={<Login />} />
+
+        </Routes>
+        <Footer />
+      </AuthProvider>
     </>
   );
 }
