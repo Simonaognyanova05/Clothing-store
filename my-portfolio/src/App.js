@@ -7,6 +7,7 @@ import Home from "./components/user/Home";
 import Project from "./components/user/Project";
 import Login from "./components/admin/Login";
 import Footer from "./components/user/Footer";
+import HomeAdmin from "./components/admin/HomeAdmin";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/projects" element={<Project />} />
 
           <Route path="/admin/login" element={<Login />} />
+          <Route path="/admin/" element={<HomeAdmin />} />
 
         </Routes>
         <Footer />

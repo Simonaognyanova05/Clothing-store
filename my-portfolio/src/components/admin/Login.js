@@ -24,7 +24,7 @@ export default function Login() {
         };
 
         onLoginAdmin(adminResult);
-        navigate('/');
+        navigate('/admin/');
     }
     return (
         <section id="admin">
