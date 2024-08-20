@@ -23,7 +23,8 @@ export default function Login() {
             return;
         };
 
-        onLoginAdmin(adminResult);
+        let data = await adminResult.json();
+        onLoginAdmin(data);
         navigate('/admin/');
     }
     return (
