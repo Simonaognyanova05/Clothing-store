@@ -7,6 +7,7 @@ export default function About() {
                 <p><strong>Name:</strong> John Doe</p>
                 <p><strong>Specialty:</strong> Front-End Developer</p>
                 <p><strong>Location:</strong> Sofia, Bulgaria</p>
+                <p><strong>Education:</strong> TU-Sofia</p>
                 <p>I am a passionate web developer with experience in building responsive and user-friendly websites. I specialize in front-end development, creating visually appealing and functional designs using the latest technologies. With a strong background in HTML, CSS, and JavaScript, I bring ideas to life on the web.</p>
                 <a href="assets/cv/john_doe_cv.pdf" download class="btn">Download CV</a>
             </div>

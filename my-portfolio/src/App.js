@@ -9,6 +9,7 @@ import Login from "./components/admin/Login";
 import Footer from "./components/user/Footer";
 import HomeAdmin from "./components/admin/HomeAdmin";
 import Logout from "./components/admin/Logout";
+import ContactAdmin from "./components/admin/ContactAdmin";
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
           <Route path="/admin/login" element={<Login />} />
           <Route path="/admin/logout" element={<Logout />} />
           <Route path="/admin/" element={<HomeAdmin />} />
+          <Route path="/admin/contacts" element={<ContactAdmin />} />
+
 
 
         </Routes>

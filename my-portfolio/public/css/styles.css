@@ -211,7 +211,8 @@ header nav ul li a {
   border: 1px solid #ddd;
 }
 
-#admin form input[type="submit"] {
+#admin form input[type="submit"],
+.readedMessage {
   background-color: #0073e6;
   color: #fff;
   padding: 10px 20px;
@@ -219,10 +220,15 @@ header nav ul li a {
   cursor: pointer;
 }
 
-#admin form input[type="submit"]:hover {
+#admin form input[type="submit"]:hover,
+.readedMessage:hover {
   background-color: #005bb5;
 }
 
+.readedMessage{
+  text-decoration: none;
+  margin-top: 100px;
+}
 /* Footer */
 footer {
   background-color: #333;

@@ -30,7 +30,7 @@ export default function Login() {
     return (
         <section id="admin">
             <div class="content">
-                <h2>Admin Panel</h2>
+                <h2>Admin Login</h2>
                 <form onSubmit={loginHandler}>
                     <label for="username">Username:</label>
                     <input type="text" id="username" name="username" required />
