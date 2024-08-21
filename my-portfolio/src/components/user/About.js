@@ -1,15 +1,29 @@
+import { useState, useEffect } from 'react';
+import { getAboutData } from '../../services/getAboutData';
+
 export default function About() {
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        getAboutData()
+            .then(result => {
+                return result.json();
+            })
+            .then(res => {
+                setData(res);
+            })
+    }, [data])
     return (
         <section id="about">
             <div class="content">
                 <h2>About Me</h2>
-                <img src="https://via.placeholder.com/150" alt="Your Photo" class="profile-photo" />
-                <p><strong>Name:</strong> John Doe</p>
-                <p><strong>Specialty:</strong> Front-End Developer</p>
-                <p><strong>Location:</strong> Sofia, Bulgaria</p>
-                <p><strong>Education:</strong> TU-Sofia</p>
-                <p>I am a passionate web developer with experience in building responsive and user-friendly websites. I specialize in front-end development, creating visually appealing and functional designs using the latest technologies. With a strong background in HTML, CSS, and JavaScript, I bring ideas to life on the web.</p>
-                <a href="assets/cv/john_doe_cv.pdf" download class="btn">Download CV</a>
+                <img src={data.profileImage} alt="Your Photo" class="profile-photo" />
+                <p><strong>Name:</strong> {data.name}</p>
+                <p><strong>Specialty:</strong> {data.specialty}</p>
+                <p><strong>Location:</strong> {data.location}</p>
+                <p><strong>Education:</strong> {data.education}</p>
+                <p>{data.description}</p>
+                <a href="assets/CV.pdf" download class="btn">Download CV</a>
             </div>
         </section>
     );
