@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { sentMessage } from "../../services/sentMessage";
+import { sentMessage } from "../../services/user/sentMessage";
 
 export default function Contact() {
     const navigate = useNavigate();

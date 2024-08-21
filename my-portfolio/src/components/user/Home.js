@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getHomeData } from "../../services/getHomeData";
+import { getHomeData } from "../../services/user/getHomeData";
 
 export default function Home() {
     const [data, setData] = useState([]);
