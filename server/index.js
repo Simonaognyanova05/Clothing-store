@@ -3,6 +3,7 @@ const cors = require('cors');
 const { loginAdmin } = require('./services/loginAdmin');
 const { welcomeUser } = require('./services/welcomeUser');
 const { getWelcomeData } = require('./services/getWelcomeData');
+const { postAboutMe } = require('./services/postAboutMe');
 
 
 const app = express();
@@ -12,6 +13,10 @@ app.use(express.json());
 
 app.post('/login', async (req, res) => {
     await loginAdmin(req, res);
+});
+
+app.post('/admin/about', async (req, res) => {
+    await postAboutMe(req, res);
 });
 
 app.put('/admin/welcome', async (req, res) => {
