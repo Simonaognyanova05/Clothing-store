@@ -15,7 +15,7 @@ app.post('/login', async (req, res) => {
     await loginAdmin(req, res);
 });
 
-app.post('/admin/about', async (req, res) => {
+app.put('/admin/about', async (req, res) => {
     await postAboutMe(req, res);
 });
 

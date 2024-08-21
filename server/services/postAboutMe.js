@@ -13,11 +13,8 @@ async function postAboutMe(req, res) {
 
     const { name, specialty, location, education, description, profileImage } = req.body;
     try {
-        const about = new About({
-            name, specialty, location, education, description, profileImage
-        });
+        await About.findOneAndUpdate({ $set: { name, specialty, location, education, description, profileImage } });
 
-        await about.save();
         return res.status(200).json();
     } catch (e) {
         throw e;
