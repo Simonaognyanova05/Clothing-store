@@ -35,6 +35,7 @@ app.put('/admin/projects', async (req, res) => {
 app.put('/admin/welcome', async (req, res) => {
     await welcomeUser(req, res);
 });
+
 app.get('/', async (req, res) => {
     let data = await getWelcomeData(req, res);
     res.json(data);
