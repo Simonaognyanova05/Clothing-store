@@ -1,9 +1,11 @@
 const express = require('express');
 const cors = require('cors');
+
 const { loginAdmin } = require('./services/loginAdmin');
 const { welcomeUser } = require('./services/welcomeUser');
 const { getWelcomeData } = require('./services/getWelcomeData');
-const { postAboutMe } = require('./services/postAboutMe');
+const { updateAboutMe } = require('./services/updateAboutMe');
+const { getAboutData } = require('./services/getAboutData');
 
 
 const app = express();
@@ -16,7 +18,12 @@ app.post('/login', async (req, res) => {
 });
 
 app.put('/admin/about', async (req, res) => {
-    await postAboutMe(req, res);
+    await updateAboutMe(req, res);
+});
+
+app.get('/admin/about', async (req, res) => {
+    let result = await getAboutData(req, res);
+    res.json(result);
 });
 
 app.put('/admin/welcome', async (req, res) => {

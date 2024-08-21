@@ -8,17 +8,16 @@ const connectionParams = {
     useNewUrlParser: true
 };
 
-async function postAboutMe(req, res) {
+async function getAboutData(req, res) {
     await mongoose.connect(dbUrl, connectionParams);
 
-    const { name, specialty, location, education, description, profileImage } = req.body;
     try {
-        await About.findOneAndUpdate({ $set: { name, specialty, location, education, description, profileImage } });
+        const about = await About.findOne({});
 
-        return res.status(200).json();
+        return about;
     } catch (e) {
         throw e;
     }
 };
 
-module.exports = { postAboutMe };
+module.exports = { getAboutData };
