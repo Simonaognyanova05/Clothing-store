@@ -2,7 +2,7 @@ export default function WelcomeUser() {
     return (
         <section id="admin">
         <div class="content">
-            <h2>Update Projects</h2>
+            <h2>Create Project</h2>
             <form>
                 <label for="title">Title:</label>
                 <input type="text" id="title" name="title" required />

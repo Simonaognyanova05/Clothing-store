@@ -10,6 +10,7 @@ const { updateProjects } = require('./services/updateProjects');
 const { addContact } = require('./services/addContact');
 const { getContacts } = require('./services/getContacts');
 const { markAsRead } = require('./services/markAsRead');
+const { createProject } = require('./services/createProject');
 
 const app = express();
 
@@ -29,8 +30,12 @@ app.get('/about', async (req, res) => {
     res.json(result);
 });
 
-app.put('/admin/projects', async (req, res) => {
+app.put('/admin/updateProject', async (req, res) => {
     await updateProjects(req, res);
+});
+
+app.post('/admin/createProject', async (req, res) => {
+    await createProject(req, res);
 });
 
 app.put('/admin/welcome', async (req, res) => {
