@@ -11,6 +11,7 @@ const { addContact } = require('./services/addContact');
 const { getContacts } = require('./services/getContacts');
 const { markAsRead } = require('./services/markAsRead');
 const { createProject } = require('./services/createProject');
+const { getProjects } = require('./services/getProjects');
 
 const app = express();
 
@@ -38,6 +39,11 @@ app.post('/admin/createProject', async (req, res) => {
     await createProject(req, res);
 });
 
+app.get('/admin/getProjects', async (req, res) => {
+    let result = await getProjects(req, res);
+    res.json(result);
+});
+
 app.put('/admin/welcome', async (req, res) => {
     await welcomeUser(req, res);
 });
@@ -56,7 +62,7 @@ app.get('/contact', async (req, res) => {
     res.json(result);
 });
 
-app.delete('/contact/:messageId', async(req, res) => {
+app.delete('/contact/:messageId', async (req, res) => {
     await markAsRead(req, res);
 })
 

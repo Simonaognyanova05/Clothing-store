@@ -33,7 +33,7 @@ export default function ProjectsAdmin() {
                     <label for="img">Image:</label>
                     <input type="text" id="img" name="img" required />
 
-                    <input type="submit" value="Update" />
+                    <input type="submit" value="Create" />
                 </form>
             </div>
         </section>
