@@ -1,10 +1,12 @@
+import {Link} from 'react-router-dom';
+
 export default function ContactContainer({message}) {
     return (
         <div id="message-container" style={{margin: '50px'}}>
             <h3>Тема: {message.name}</h3>
             <p>{message.message}</p>
             <p><strong>From:</strong> {message.email}</p>
-            <a className="readedMessage" href="/ready">Mark as read</a>
+            <Link className="readedMessage" to={`/admin/contacts/${message._id}`}>Mark as read</Link>
         </div>
     );
 }

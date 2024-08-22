@@ -23,22 +23,8 @@ export default function ContactAdmin() {
                     message.length > 0
                     ? message.map(x => <ContactContainer message={x}/>)
                     : <h1>No messages!</h1>
-                }
-                
+                }               
             </div>
         </section>
     );
 }
-
-
-{/* {messages.length > 0 ? (
-                        messages.map((message) => (
-                            <div key={message.id} className="message">
-                                <h3>{message.title}</h3>
-                                <p>{message.content}</p>
-                                <p><strong>From:</strong> {message.sender}</p>
-                            </div>
-                        ))
-                    ) : (
-                        <p>No messages to display.</p>
-                    )} */}
