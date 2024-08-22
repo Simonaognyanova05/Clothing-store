@@ -18,26 +18,26 @@ export default function Home() {
             <section id="home">
                 <div class="intro">
                     <h1>{data.title}</h1>
-                    <p>{data.title}</p>
+                    <p>{data.subtitle}</p>
                 </div>
             </section>
 
-            <section id="gallery">
+            <section id="gallery" style={{marginBottom: '100px'}}>
                 <div class="content">
                     <h2>Gallery</h2>
                     <div class="gallery-grid">
                         <div class="gallery-item">
-                            <img src={data.img1} alt="Gallery Image 1" />
+                            <img src={data.img1} alt="Gallery Image 1" style={{width: '500px', height: '300px'}} />
                         </div>
                         <div class="gallery-item">
-                            <img src={data.img2} alt="Gallery Image 2" />
+                            <img src={data.img2} alt="Gallery Image 2"style={{width: '500px', height: '300px'}} />
                         </div>
                         <div class="gallery-item">
-                            <img src={data.img3} alt="Gallery Image 3" />
+                            <img src={data.img3} alt="Gallery Image 3"style={{width: '500px', height: '300px'}} />
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
         </>
     );
 }

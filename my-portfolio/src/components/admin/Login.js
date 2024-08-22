@@ -1,6 +1,6 @@
 import { useAuth } from "../../contexts/AuthContext";
 import { useNavigate } from 'react-router-dom';
-import { loginAdmin } from '../../services/loginAdmin';
+import { loginAdmin } from '../../services/admin/loginAdmin';
 
 export default function Login() {
     const navigate = useNavigate();
