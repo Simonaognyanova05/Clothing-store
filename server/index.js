@@ -9,6 +9,7 @@ const { getAboutData } = require('./services/getAboutData');
 const { updateProjects } = require('./services/updateProjects');
 const { addContact } = require('./services/addContact');
 const { getContacts } = require('./services/getContacts');
+const { markAsRead } = require('./services/markAsRead');
 
 const app = express();
 
@@ -49,5 +50,9 @@ app.get('/contact', async (req, res) => {
     let result = await getContacts(req, res);
     res.json(result);
 });
+
+app.delete('/contact/:messageId', async(req, res) => {
+    await markAsRead(req, res);
+})
 
 app.listen(2005);
