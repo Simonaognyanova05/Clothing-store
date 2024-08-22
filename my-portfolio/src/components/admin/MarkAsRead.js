@@ -11,6 +11,7 @@ export default function MarkAsRead() {
             .then(() => {
                 navigate('/admin/contacts');
                 alert('The message is marked as read!');
+                return;
             })
     }, [])
     return null;
