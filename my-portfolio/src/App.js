@@ -10,7 +10,7 @@ import Footer from "./components/user/Footer";
 
 import HomeAdmin from "./components/admin/HomeAdmin";
 import Logout from "./components/admin/Logout";
-import ContactAdmin from "./components/admin/ContactAdmin";
+import ContactAdmin from "./components/admin/Contacts/ContactAdmin";
 import AboutAdmin from "./components/admin/AboutAdmin";
 import ProjectsAdmin from "./components/admin/ProjectsAdmin";
 import WelcomeUser from "./components/admin/WelcomeUser";
