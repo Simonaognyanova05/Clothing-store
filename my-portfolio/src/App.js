@@ -15,6 +15,7 @@ import AboutAdmin from "./components/admin/AboutAdmin";
 import ProjectsAdmin from "./components/admin/ProjectsAdmin";
 import WelcomeUser from "./components/admin/WelcomeUser";
 import MarkAsRead from "./components/admin/MarkAsRead";
+import Details from "./components/user/Details";
 
 
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects" element={<Project />} />
+          <Route path="/projectDetails" element={<Details />} />
 
           <Route path="/admin/login" element={<Login />} />
           <Route path="/admin/logout" element={<Logout />} />
@@ -38,6 +40,7 @@ function App() {
           <Route path="/admin/about" element={<AboutAdmin />} />
           <Route path="/admin/projects" element={<ProjectsAdmin />} />
           <Route path="/admin/welcome" element={<WelcomeUser />} />
+
 
 
 
