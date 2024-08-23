@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { useAuth } from '../../contexts/AuthContext';
 import { getDetailsProject } from '../../services/user/getDetailsProject';
 
 export default function Details() {
     const [project, setProject] = useState([]);
     const { projectId } = useParams();
+    const { admin } = useAuth();
 
     useEffect(() => {
         getDetailsProject(projectId)
@@ -22,15 +24,22 @@ export default function Details() {
             </header>
             <main style={{ marginBottom: '30px' }}>
                 <div className="project-image">
-                    <img src={project.img} alt="Project Image" style={{ width: '800px', height: '500px' }}/>
+                    <img src={project.img} alt="Project Image" style={{ width: '800px', height: '500px' }} />
                 </div>
                 <div className="project-description">
                     <p>{project.description}</p>
                 </div>
                 <a href={project.gitLink}>GitHub Link</a>
             </main>
-            <a className="readedMessage" href="" style={{ margin: '10px' }}>Edit</a>
-            <a className="readedMessage" href="" style={{ margin: '10px' }}>Delete</a>
+            {
+                Boolean(admin.username)
+                    ? <>
+                        <a className="readedMessage" href="" style={{ margin: '10px' }}>Edit</a>
+                        <a className="readedMessage" href="" style={{ margin: '10px' }}>Delete</a>
+                    </>
+                    : ''
+            }
+
 
 
         </div>
