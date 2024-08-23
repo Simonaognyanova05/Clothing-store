@@ -12,6 +12,7 @@ const { getContacts } = require('./services/getContacts');
 const { markAsRead } = require('./services/markAsRead');
 const { createProject } = require('./services/createProject');
 const { getProjects } = require('./services/getProjects');
+const { getDetailsProjects } = require('./services/getDetailsProject');
 
 const app = express();
 
@@ -41,6 +42,11 @@ app.post('/admin/createProject', async (req, res) => {
 
 app.get('/admin/getProjects', async (req, res) => {
     let result = await getProjects(req, res);
+    res.json(result);
+});
+
+app.get('/admin/getDetails/:projectId', async (req, res) => {
+    let result = await getDetailsProjects(req, res);
     res.json(result);
 });
 
