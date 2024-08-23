@@ -8,9 +8,9 @@ export default function ProjectsAdmin() {
         e.preventDefault();
 
         let formData = new FormData(e.currentTarget);
-        let { title, description, img } = Object.fromEntries(formData);
+        let { title, subtitle, description, gitLink, img } = Object.fromEntries(formData);
 
-        let res = await createProject(title, description, img);
+        let res = await createProject(title, subtitle, description, gitLink, img);
 
         if (res.status === 200) {
             alert('The project was created successfully!');
@@ -27,8 +27,14 @@ export default function ProjectsAdmin() {
                     <label for="title">Title:</label>
                     <input type="text" id="title" name="title" required />
 
+                    <label for="subtitle">Subtitle:</label>
+                    <input type="text" id="subtitle" name="subtitle" required />
+
                     <label for="description">Description:</label>
                     <input type="text" id="description" name="description" required />
+
+                    <label for="gitLink">GitHub Link:</label>
+                    <input type="text" id="gitLink" name="gitLink" required />
 
                     <label for="img">Image:</label>
                     <input type="text" id="img" name="img" required />

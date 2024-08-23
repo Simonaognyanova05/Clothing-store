@@ -11,10 +11,10 @@ const connectionParams = {
 async function createProject(req, res) {
     await mongoose.connect(dbUrl, connectionParams);
 
-    const { title, description, img } = req.body;
+    const { title, subtitle, description, gitLink, img } = req.body;
 
     try {
-        const project = new Project({ title, description, img });
+        const project = new Project({ title, subtitle, description, gitLink, img });
 
         await project.save();
         return res.status(200).json();
