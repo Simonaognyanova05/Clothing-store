@@ -13,6 +13,7 @@ const { markAsRead } = require('./services/markAsRead');
 const { createProject } = require('./services/createProject');
 const { getProjects } = require('./services/getProjects');
 const { getDetailsProjects } = require('./services/getDetailsProject');
+const { deleteProject } = require('./services/deleteProject');
 
 const app = express();
 
@@ -48,6 +49,10 @@ app.get('/admin/getProjects', async (req, res) => {
 app.get('/admin/getDetails/:projectId', async (req, res) => {
     let result = await getDetailsProjects(req, res);
     res.json(result);
+});
+
+app.delete('/admin/deleteProject/:projectId', async (req, res) => {
+    await deleteProject(req, res);
 });
 
 app.put('/admin/welcome', async (req, res) => {
