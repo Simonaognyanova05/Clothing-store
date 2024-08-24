@@ -33,7 +33,7 @@ app.get('/about', async (req, res) => {
     res.json(result);
 });
 
-app.put('/admin/updateProject', async (req, res) => {
+app.put('/admin/updateProject/:projectId', async (req, res) => {
     await updateProjects(req, res);
 });
 
