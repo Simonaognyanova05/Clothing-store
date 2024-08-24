@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import { getDetailsProject } from '../../services/user/getDetailsProject';
 
@@ -34,8 +34,8 @@ export default function Details() {
             {
                 Boolean(admin.username)
                     ? <>
-                        <a className="readedMessage" href="" style={{ margin: '10px' }}>Edit</a>
-                        <a className="readedMessage" href="" style={{ margin: '10px' }}>Delete</a>
+                        <Link className="readedMessage" to="" style={{ margin: '10px' }}>Edit</Link>
+                        <Link className="readedMessage" to={`/delete/${project._id}`} style={{ margin: '10px' }}>Delete</Link>
                     </>
                     : ''
             }

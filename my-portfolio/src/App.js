@@ -16,6 +16,7 @@ import ProjectsAdmin from "./components/admin/ProjectsAdmin";
 import WelcomeUser from "./components/admin/WelcomeUser";
 import MarkAsRead from "./components/admin/MarkAsRead";
 import Details from "./components/user/Details";
+import DeleteProject from "./components/admin/DeleteProject";
 
 
 
@@ -31,6 +32,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects" element={<Project />} />
           <Route path="/projectDetails/:projectId" element={<Details />} />
+          <Route path="/delete/:projectId" element={<DeleteProject />} />
 
           <Route path="/admin/login" element={<Login />} />
           <Route path="/admin/logout" element={<Logout />} />
