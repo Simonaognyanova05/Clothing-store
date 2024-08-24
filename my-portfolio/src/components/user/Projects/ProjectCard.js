@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 export default function ProjectCard({ project }) {
     return (
         <Link id='project-link' to={`/projectDetails/${project._id}`}>
-            <div className="project" style={{ width: '400px', height: '300px' }}>
+            <div className="project">
                 <img src={project.img} alt="Gallery Image 1" style={{ width: '300px', height: '200px' }} />
-                <h3>{project.title}</h3>
+                <h2>{project.title}</h2>
                 <p>{project.subtitle}</p>
             </div>
         </Link>

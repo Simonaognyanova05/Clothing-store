@@ -113,9 +113,22 @@ header nav ul li a {
   max-width: 300px;
 }
 
-#projects .project h3 {
-  margin-top: 0;
+#projects .project h2 {
+  margin-top: 10;
 }
+
+#projects .project p {
+  margin-top: 10;
+  font-size: 18px;
+}
+
+.project-image img {
+  width: '800px';
+  height: '500px';
+  margin-top: 10px;
+}
+
+;
 
 /* Gallery Section */
 #gallery {
@@ -239,6 +252,7 @@ header nav ul li a {
 .container-details {
   max-width: 800px;
   margin: 30px auto;
+  margin-bottom: 100px;
   padding: 20px;
   background-color: #fff;
   border-radius: 8px;
@@ -263,16 +277,25 @@ header h1 {
   line-height: 1.8;
 }
 
-#project-link{
+#project-link {
   color: #333;
   text-decoration: none;
 }
-#home{
+
+#home {
   font-size: 20px;
 }
 
-#home h1{
+#home h1 {
   font-style: italic;
+}
+
+#desc {
+  font-size: 18px;
+}
+
+.container-details a {
+  font-size: 18px;
 }
 
 footer {

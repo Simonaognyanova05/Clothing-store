@@ -18,16 +18,16 @@ export default function Details() {
             })
     }, [project])
     return (
-        <div className="container-details" style={{ marginBottom: '100px' }}>
+        <div className="container-details">
             <header className="header-details">
                 <h1 id="details-title">{project.title}</h1>
             </header>
             <main style={{ marginBottom: '30px' }}>
                 <div className="project-image">
-                    <img src={project.img} alt="Project Image" style={{ width: '800px', height: '500px' }} />
+                    <img src={project.img} alt="Project Image"  />
                 </div>
                 <div className="project-description">
-                    <p>{project.description}</p>
+                    <p id='desc'>{project.description}</p>
                 </div>
                 <a href={project.gitLink}>GitHub Link</a>
             </main>
@@ -39,9 +39,6 @@ export default function Details() {
                     </>
                     : ''
             }
-
-
-
         </div>
     )
 }
