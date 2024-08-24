@@ -11,11 +11,11 @@ const connectionParams = {
 async function updateProjects(req, res) {
     await mongoose.connect(dbUrl, connectionParams);
 
-    const { title, description, img } = req.body;
+    const { title, subtitle, description, gitLink, img } = req.body;
     let projectId = req.params.projectId;
 
     try {
-        await Project.findByIdAndUpdate({ _id: projectId }, { $set: { title, description, img } });
+        await Project.findByIdAndUpdate({ _id: projectId }, { $set: { title, subtitle, description, gitLink, img } });
 
         return res.status(200).json();
     } catch (e) {

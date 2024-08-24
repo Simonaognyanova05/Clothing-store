@@ -34,7 +34,7 @@ export default function Details() {
             {
                 Boolean(admin.username)
                     ? <>
-                        <Link className="readedMessage" to="" style={{ margin: '10px' }}>Edit</Link>
+                        <Link className="readedMessage" to={`/update/${project._id}`} style={{ margin: '10px' }}>Edit</Link>
                         <Link className="readedMessage" to={`/delete/${project._id}`} style={{ margin: '10px' }}>Delete</Link>
                     </>
                     : ''

@@ -17,6 +17,7 @@ import WelcomeUser from "./components/admin/WelcomeUser";
 import MarkAsRead from "./components/admin/MarkAsRead";
 import Details from "./components/user/Details";
 import DeleteProject from "./components/admin/DeleteProject";
+import UpdateProject from "./components/admin/UpdateProject";
 
 
 
@@ -33,6 +34,7 @@ function App() {
           <Route path="/projects" element={<Project />} />
           <Route path="/projectDetails/:projectId" element={<Details />} />
           <Route path="/delete/:projectId" element={<DeleteProject />} />
+          <Route path="/update/:projectId" element={<UpdateProject />} />
 
           <Route path="/admin/login" element={<Login />} />
           <Route path="/admin/logout" element={<Logout />} />
