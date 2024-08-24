@@ -50,6 +50,7 @@ header nav ul li a {
 /* About Section */
 #about {
   padding: 50px 20px;
+  margin-bottom: 40px;
   text-align: center;
 }
 
@@ -60,13 +61,15 @@ header nav ul li a {
 #about .content p {
   max-width: 600px;
   margin: 0 auto;
+  padding: 5px;
   line-height: 1.6;
+  font-size: 18px;
 }
 
 #about .profile-photo {
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 350px;
+  height: 400px;
   margin-bottom: 20px;
 }
 
@@ -74,6 +77,7 @@ header nav ul li a {
   background-color: #0073e6;
   color: #fff;
   padding: 10px 20px;
+  margin: 10px;
   text-decoration: none;
   border-radius: 5px;
   display: inline-block;
@@ -262,6 +266,13 @@ header h1 {
 #project-link{
   color: #333;
   text-decoration: none;
+}
+#home{
+  font-size: 20px;
+}
+
+#home h1{
+  font-style: italic;
 }
 
 footer {
