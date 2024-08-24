@@ -20,7 +20,7 @@ export default function Contact() {
     }
     return (
         <section id="contact">
-            <div class="content">
+            <div className="content">
                 <h2>Contact Me</h2>
                 <form onSubmit={messageHandler}>
                     <label for="name">Name:</label>

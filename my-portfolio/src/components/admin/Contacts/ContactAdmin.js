@@ -21,9 +21,9 @@ export default function ContactAdmin() {
                 <h2>Messages from Users</h2>
                 {
                     message.length > 0
-                    ? message.map(x => <ContactContainer message={x}/>)
-                    : <h1>No messages!</h1>
-                }               
+                        ? message.map(x => <ContactContainer key={x._id} message={x} />)
+                        : <h1>No messages!</h1>
+                }
             </div>
         </section>
     );

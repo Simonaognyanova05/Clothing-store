@@ -8,7 +8,7 @@ export default function HomeAdmin() {
     return (
         <>
             <section id="home">
-                <div class="intro">
+                <div className="intro">
                     <h1>Welcome, {admin?.username || 'Admin'}!</h1>
                     <p>Now you can make the desired changes to your site.</p>
                 </div>

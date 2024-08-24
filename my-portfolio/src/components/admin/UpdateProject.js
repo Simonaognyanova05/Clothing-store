@@ -22,22 +22,22 @@ export default function UpdateProject() {
     }
     return (
         <section id="admin">
-            <div class="content">
+            <div className="content">
                 <h2>Update Project</h2>
                 <form onSubmit={updateHandler}>
-                    <label for="title">Title:</label>
+                    <label htmlFor="title">Title:</label>
                     <input type="text" id="title" name="title" required />
 
-                    <label for="subtitle">Subtitle:</label>
+                    <label htmlFor="subtitle">Subtitle:</label>
                     <input type="text" id="subtitle" name="subtitle" required />
 
-                    <label for="description">Description:</label>
+                    <label htmlFor="description">Description:</label>
                     <input type="text" id="description" name="description" required />
 
-                    <label for="gitLink">GitHub Link:</label>
+                    <label htmlFor="gitLink">GitHub Link:</label>
                     <input type="text" id="gitLink" name="gitLink" required />
 
-                    <label for="img">Image:</label>
+                    <label htmlFor="img">Image:</label>
                     <input type="text" id="img" name="img" required />
 
                     <input type="submit" value="Update" />

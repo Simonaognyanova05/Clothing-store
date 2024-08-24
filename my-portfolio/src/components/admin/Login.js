@@ -29,13 +29,13 @@ export default function Login() {
     }
     return (
         <section id="admin">
-            <div class="content">
+            <div className="content">
                 <h2>Admin Login</h2>
                 <form onSubmit={loginHandler}>
-                    <label for="username">Username:</label>
+                    <label htmlFor="username">Username:</label>
                     <input type="text" id="username" name="username" required />
 
-                    <label for="password">Password:</label>
+                    <label htmlFor="password">Password:</label>
                     <input type="password" id="password" name="password" required />
 
                     <input type="submit" value="Login" />

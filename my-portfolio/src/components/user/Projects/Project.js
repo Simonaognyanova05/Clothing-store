@@ -16,12 +16,12 @@ export default function Project() {
     }, [projects])
     return (
         <section id="projects">
-            <div class="content">
+            <div className="content">
                 <h2>My Projects</h2>
-                <div class="projects-grid">
+                <div className="projects-grid">
                     {
                         projects.length > 0
-                        ? projects.map(x => <ProjectCard project={x} />)
+                        ? projects.map(x => <ProjectCard key={x._id} project={x} />)
                         : <h2>There are no existing projects!</h2>  
                     }
                 </div>
